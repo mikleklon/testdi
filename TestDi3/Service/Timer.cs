@@ -36,13 +36,13 @@ namespace TestDi3.Service
                 if (_floorMin(note.start, zero) == now)
                 {
                     System.Console.ForegroundColor = ConsoleColor.Green;
-                    System.Console.WriteLine("\n\nThe '{0}' event start!\n\n", note.name);
+                    System.Console.WriteLine("\nThe '{0}' event start!\n", note.name);
                     System.Console.ForegroundColor = ConsoleColor.White;
                 }
                 else if(_floorMin(note.start, note.notification) == now)
                 {
                     System.Console.ForegroundColor = ConsoleColor.Green;
-                    System.Console.WriteLine("\n\nAfter {0} minutes, the '{1}' event will start\n\n", note.notification.TotalMinutes, note.name);
+                    System.Console.WriteLine("\nThe '{0}' event will start in {1}(After {2} minutes)\n\n", note.name, note.start, note.notification.TotalMinutes );
                     System.Console.ForegroundColor = ConsoleColor.White;
 
                 }
